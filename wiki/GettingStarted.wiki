@@ -1,4 +1,4 @@
-<h3>Getting started with MBS Pattern<h3>
+<h3>Getting started with MBS Pattern</h3>
 
 #summary One-sentence summary of this page.
 
