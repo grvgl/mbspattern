@@ -1,4 +1,12 @@
 <h3>Getting started with MBS Pattern</h3>
+<ol>
+<li>
+Download the project from here. Decompress it in your computer.
+</li><li>
+Run the sample applications provided in directory...
+</li>
+</ol>
+
 
 #summary One-sentence summary of this page.
 
