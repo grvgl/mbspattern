@@ -2,6 +2,14 @@
 
 MBS pattern is an MVC implementation.
 
+<b>What are the goals of MBS Pattern?</b>
+
+MBS Pattern aims to provide an easy to get started MVC implementation without compromising the MVC benefits. Of course, implementations will vary depending your project needs.
+
+<b>Why would I be interested in MBS Pattern</b>
+
+This is an open source project. You can use the code in your projects under the open source licence. You may also start contributing to the project. That will be great to evolve with the growing community. 
+
 #summary One-sentence summary of this page.
 
 = Introduction =
