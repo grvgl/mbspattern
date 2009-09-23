@@ -5,7 +5,7 @@ Class names in the com.shivolve.as3.mbs.action package are based on design patte
 <li>
 <b>MBS</b>: Name of the framework 
 </li><li>
-<b>Notification</b>: Name of the Pattern Class whose interface has been implemented in the class MBSNotificationEvent. This signifies the purpose of the class.
+<b>Notification</b>: This part of the class name indicates the purpose of the class. This is the name of the Pattern Class whose interface has been implemented in the class MBSNotificationEvent. It signifies the purpose of the class.
 </li><li>
-<b>Event</b>: AS3 Class extended by MBSNotificationEvent
+<b>Event</b>: This part of the class name refers to the in-built AS3 Class that is extended by MBSNotificationEvent.
 </li></ol></li>
