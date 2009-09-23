@@ -1,4 +1,4 @@
-MBS Pattern uses following concepts.
+MBS Pattern uses following naming convention.
 <li>
 action package follows the naming convention based on design patterns with reference to inherent details of the programming language. For example name of the class MBSNotificationEvent in com.shivolve.as3.mbs.action package has three parts in the following order -
 <ol>
