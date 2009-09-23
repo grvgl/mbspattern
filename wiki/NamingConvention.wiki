@@ -1,11 +1,11 @@
 MBS Pattern uses following naming convention.
 <li>
-Class names in the com.shivolve.as3.mbs.action package are based on design pattern classes with reference to inherent details of the programming language. <br/>For example name of the class MBSNotificationEvent has been constructed by combining three parts in the following order -
+Class names in the com.shivolve.as3.mbs.action package are based on design pattern classes with reference to inherent details of the programming language. <br/>For example name of the class <b>MBSNotificationEvent</b> has been constructed by combining three parts in the following order -
 <ol>
 <li>
-MBS: Name of the framework 
+<b>MBS</b>: Name of the framework 
 </li><li>
-Notification: Name of the Pattern Class whose interface has been implemented in the class MBSNotificationEvent. This signifies the purpose of the class.
+<b>Notification</b>: Name of the Pattern Class whose interface has been implemented in the class MBSNotificationEvent. This signifies the purpose of the class.
 </li><li>
-Event: AS3 Class extended by MBSNotificationEvent
+<b>Event</b>: AS3 Class extended by MBSNotificationEvent
 </li></ol></li>
