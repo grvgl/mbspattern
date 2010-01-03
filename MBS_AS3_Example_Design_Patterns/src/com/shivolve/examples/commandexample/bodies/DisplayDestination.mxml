@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:TextArea xmlns:mx="http://www.adobe.com/2006/mxml">
+	<mx:Script>
+		<![CDATA[
+			private var channel:uint;
+			private var url:String;
+			
+			public function setChannel(channel:uint):void
+			{
+				this.channel = channel;
+				this.text = String(this.channel);
+			}
+			public function getChannel():uint
+			{
+				return this.channel;
+			}
+			public function setURL(url:String):void
+			{
+				this.url = url;
+				this.text += "\n" + this.url;
+			}
+		]]>
+	</mx:Script>
+</mx:TextArea>

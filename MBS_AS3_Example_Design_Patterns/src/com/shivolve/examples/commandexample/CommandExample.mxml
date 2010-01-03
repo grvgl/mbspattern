@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml"   
+	xmlns:body="com.shivolve.examples.mementoexample.bodies.*" 
+	xmlns:bodies="com.shivolve.examples.commandexample.bodies.*">
+	<mx:Script>
+		<![CDATA[
+			import com.shivolve.mbs.as3.mind.observer.Notification;
+			import com.shivolve.examples.commandexample.commands.*;
+			import com.shivolve.mbs.as3.mind.command.MacroCommand;
+			import com.shivolve.mbs.as3.interfaces.mind.ICommand;
+			
+			private static const COMMUNITY_CHANNEL:uint = 0;
+			private static const FEED_CHANNEL:uint = 1;
+			private static const SEARCH_CHANNEL:uint = 2;
+
+			// Self Improvement Destinations
+			private var destinations:Array;
+			
+			private var commands:MacroCommand;
+			private var currentChannel:uint;
+			private function initializeCommands():void
+			{
+				this.destinations = new Array();
+				
+				this.commands = new MacroCommand();
+				this.commands.addCommand(SetChannelToCommunityCommand);	
+				this.commands.addCommand(SetChannelToFeedCommand);	
+				this.commands.addCommand(SetChannelToSearchCommand);	
+				this.commands.addCommand(DisplayDestinationCommand);	
+			}
+			
+			private function setCommand(e:MouseEvent):void
+			{
+				var buttonId:String = e.target.name;
+				
+				var notification:Notification = new Notification("", this.displayDestination, "");
+				var command:ICommand;
+				switch (buttonId)
+				{
+					case "communityChannel":
+						command = new SetChannelToCommunityCommand();
+						command.execute(notification);					
+						break;
+					case "feedChannel":
+						command = new SetChannelToFeedCommand();
+						command.execute(notification);
+						break;
+					case "searchChannel":
+						command = new SetChannelToSearchCommand();
+						command.execute(notification);
+						break;
+					case "mindDestination":
+						command = new DisplayMindDestinationCommand();
+						command.execute(notification);
+						break;
+					case "bodyDestination":
+						command = new DisplayBodyDestinationCommand();
+						command.execute(notification);
+						break;
+					case "soulDestination":
+						command = new DisplaySoulDestinationCommand();
+						command.execute(notification);
+						break;
+				}	
+			}
+		]]>
+	</mx:Script>
+	<mx:VBox>
+		<mx:Label text="Command Example" fontSize="25" fontStyle="normal"/>
+		<mx:HBox>
+			<mx:Label text="Select a channel: " fontSize="15" fontStyle="normal"/>
+			<mx:Button id="communityChannel" label="Community Posts" click="setCommand(event)" />
+			<mx:Button id="feedChannel" label="Feeds"  click="setCommand(event)"/>
+			<mx:Button id="searchChannel" label="Search Results" click="setCommand(event)"/>
+		</mx:HBox>
+		<mx:HBox>
+			<mx:Label text="Select a destination: " fontSize="15" fontStyle="normal"/>
+			<mx:Button id="mindDestination" label="Mind Improvement Destination" click="setCommand(event)"/>
+			<mx:Button id="bodyDestination" label="Body Improvement Destination" click="setCommand(event)"/>
+			<mx:Button id="soulDestination" label="Soul Improvement Destination" click="setCommand(event)"/>
+		</mx:HBox>
+		<bodies:DisplayDestination id="displayDestination" width="700" height="250">
+			
+		</bodies:DisplayDestination>
+	</mx:VBox>
+</mx:Canvas>

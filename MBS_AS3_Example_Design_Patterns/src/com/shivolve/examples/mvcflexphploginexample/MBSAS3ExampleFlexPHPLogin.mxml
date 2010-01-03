@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml"
+	xmlns:view="com.shivolve.examples.mvcflexphploginexample.view.*"
+	creationComplete="onInit(event)"
+	>
+	<mx:Script>
+		<![CDATA[
+			import com.shivolve.examples.mvcflexphploginexample.model.LoginModel;
+			import com.shivolve.examples.mvcflexphploginexample.control.LoginControl;
+			import com.shivolve.examples.mvcflexphploginexample.control.LoginCommand;
+			import com.shivolve.examples.mvcflexphploginexample.model.states.LoginState;
+			
+			import mx.core.Container;
+			import mx.events.FlexEvent;
+			
+			[Bindable]
+			private var loginModel:LoginModel;
+			
+			private var loginControl:LoginControl;
+			private var stateName:String;
+			
+			private function getView(stateName:String):Container
+			{
+				var viewState:Container;
+				switch (stateName)
+				{
+					case LoginState.LOGIN_STATE:
+						viewState = loginPanel;
+						break;
+					case LoginState.LOGGED_IN_STATE:
+						viewState = loggedInPanel;
+						loggedInPanel.title = "Welcome! " + this.loginPanel.username.text;
+						break;
+					case LoginState.LOGGED_OUT_STATE:
+						viewState = loggedOutPanel;
+						break;
+				}
+				return viewState;
+			}
+
+			protected function onInit(event:FlexEvent):void
+			{
+			 	this.loginModel = LoginModel.getInstance();
+				this.loginControl = LoginControl.getInstance();
+			 	this.loginViewStack.selectedChild = getView(this.loginModel.state);
+			}
+
+		]]>
+	</mx:Script>
+	<mx:ViewStack id="loginViewStack"
+				  selectedChild = "{getView(this.loginModel.state)}"
+				  width="350" height="200"
+				  >
+		<view:LoginPanel id="loginPanel"/>
+		<view:LoggedInPanel id="loggedInPanel"/>
+		<view:LoggedOutPanel id="loggedOutPanel"/>
+	</mx:ViewStack>	
+</mx:Canvas>

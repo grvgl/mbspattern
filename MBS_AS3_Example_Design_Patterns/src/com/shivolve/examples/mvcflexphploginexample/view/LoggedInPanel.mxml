@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Panel xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		  xmlns:s="library://ns.adobe.com/flex/spark" 
+		  xmlns:mx="library://ns.adobe.com/flex/halo"
+			>
+	
+	<fx:Script>
+		<![CDATA[
+			import com.shivolve.examples.mvcflexphploginexample.model.LoginModel;
+			import com.shivolve.examples.mvcflexphploginexample.model.states.LoginState;
+			import com.shivolve.examples.mvcflexphploginexample.model.vo.LoginVO;
+			
+			private var loginModel:LoginModel = LoginModel.getInstance();
+
+			/**
+			 * This method is called on the click of the Logout buttn. When the Logout button
+			 * is clickd, state of the model is modified to LOGGED_OUT_STATE.
+			 */
+			protected function logoutBtn_clickHandler(event:MouseEvent):void
+			{
+				this.loginModel.state = LoginState.LOGGED_OUT_STATE;
+			}
+				
+		]]>
+	</fx:Script>
+	
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<mx:Label text="We are happy to have you logged in :-)" />
+	<mx:Button id="logoutBtn" label="Logout" click="logoutBtn_clickHandler(event)"/>
+</mx:Panel>

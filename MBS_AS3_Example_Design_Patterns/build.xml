@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="MBS_AS3_Example_Design_Patterns" default="main" basedir=".">
+      <property name="mxmlc" location="C:\flex_sdk_4.0.0.10485\bin\mxmlc.exe"/>
+      <target name="main">
+            <exec executable="${mxmlc}" dir="." failonerror="true">
+				<arg line="src/Main.mxml"/>
+				<arg line="-source-path C:\LB.Log"/>
+				<arg line="-default-size 800 600"/>
+				<arg line="-output bin/MBSAS3ExampleDesignPatterns.swf"/>
+            </exec>
+      </target>
+</project>

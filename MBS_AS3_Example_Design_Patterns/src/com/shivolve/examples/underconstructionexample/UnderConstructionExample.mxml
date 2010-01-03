@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--- 
+	This is default class for any examplpe that is yet to be developed. Once the real example is included that replaces this Under Construction page.
+-->
+<s:Group xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		 xmlns:s="library://ns.adobe.com/flex/spark" 
+		 xmlns:mx="library://ns.adobe.com/flex/halo"
+		 creationComplete="group1_creationCompleteHandler(event)"
+		 >
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<fx:Script>
+		<![CDATA[
+			import mx.core.UIComponent;
+			import mx.events.FlexEvent;
+			
+			[Bindable]
+			public var currentExample:String;
+			
+			
+			private function showHeading():void
+			{
+				var heading:Object = new Object();
+				heading.fontSize = 25;
+				heading.fontStyle = "normal";
+				heading.fontFamily = "Arial";
+				
+				var style:StyleSheet = new StyleSheet();
+				style.setStyle(".heading", heading);
+				
+				var txtField:TextField = new TextField();
+				txtField.styleSheet = style;
+				txtField.width = 700;
+				txtField.selectable = false;
+				txtField.htmlText = "<span class = 'heading'>" + currentExample + " Exmaple coming soon?</span>";
+				var ui:UIComponent = new UIComponent()
+				ui.addChild(txtField);
+				this.addElement(ui);
+			}
+
+			protected function group1_creationCompleteHandler(event:FlexEvent):void
+			{
+				this.showHeading();
+			}
+
+		]]>
+	</fx:Script>
+	<mx:Text x="0" y="50" width="700" htmlText="{currentExample + ' example has not yet been developed. You are welcome to contribute!'}" selectable="false">
+	</mx:Text>
+	<mx:Text x="0" y="100" width="700" selectable="false">
+		<mx:htmlText >
+			<![CDATA[<a href="http://code.google.com/p/mbspattern/" target="_blank"><font color="#1122EE">MBS Pattern</font></a> (Mind, Body, Soul) is a collection of basic definitions of design patterns. These are generic enough to use for specific requirements.
+			
+You can checkout the SVN code here - <a href="http://mbspattern.googlecode.com/svn/trunk/" target="_blank"><font color="#1122EE">http://mbspattern.googlecode.com/svn/trunk/</font></a>.
+			
+You can join or start a new discussion here - <a href="http://groups.google.com/group/flash-platform-club" target="_blank"><font color="#1122EE">http://groups.google.com/group/flash-platform-club</font></a>.
+
+We could have any number of examples so feel free to add anything you would like.
+			]]>
+		</mx:htmlText>
+	</mx:Text>
+</s:Group>

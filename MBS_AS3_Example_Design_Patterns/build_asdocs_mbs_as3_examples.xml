@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="MBS_AS3_Example_Design_Patterns" default="main" basedir=".">
+      <property name="asdoc" location="C:\flex_sdk_4.0.0.10485\bin\asdoc.exe"/>
+      <property name="flexhome" location="C:\flex_sdk_4.0.0.10485"/>
+      <target name="main">
+            <exec executable="${asdoc}" dir="." failonerror="false">
+				<arg line="-doc-sources 'src'"/>
+				<arg line='-doc-sources ${basedir}\..\MBS_AS3\src'/>
+				<arg line="-source-path 'src'"/>
+				<arg line="-window-title 'MBS AS3 Example Design Patterns'"/>
+				<arg line="-output 'docs/asdocs'"/>
+				<!-- 
+					<arg line="-help list"/>
+				-->
+            </exec>
+            <echo>docs created</echo>
+      </target>
+</project>
