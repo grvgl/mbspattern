@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!---
+	LoginPanel presents the login screen to the user.
+-->
+<mx:Panel xmlns:mx="http://www.adobe.com/2006/mxml"
+		 title="Login as username=demo, password=demo">
+
+	<mx:Script>
+		<![CDATA[
+			import com.shivolve.mbs.as3.action.mind.observer.MBSNotifier;
+			import com.shivolve.examples.mvcflexphploginexample.control.*;
+			import com.shivolve.examples.mvcflexphploginexample.model.LoginModel;
+			import com.shivolve.examples.mvcflexphploginexample.model.states.LoginState;
+			import com.shivolve.examples.mvcflexphploginexample.model.vo.LoginVO;
+			
+			private var loginNotification:LoginNotification;
+			private var loginVO:LoginVO;
+			private var loginModel:LoginModel = LoginModel.getInstance();
+			private var loginNotifier:MBSNotifier;
+			
+			/**
+			 * Uses MBSNotifier to notify (dispatch) the login notification (login event).
+			 * @param	event
+			 */
+			protected function submitBtn_clickHandler(event:MouseEvent):void
+			{
+				this.loginVO = new LoginVO(this.username.text, this.password.text);
+				this.loginNotification = new LoginNotification("LoginNotification", this.loginVO, "", false, false);
+				
+				this.loginNotifier = MBSNotifier.getInstance();
+				this.loginNotifier.notify(this.loginNotification);				
+			}
+
+		]]>
+	</mx:Script>
+
+	<mx:Form>
+		<mx:FormItem label="Username:">
+			<mx:TextInput id="username">
+			</mx:TextInput>
+		</mx:FormItem>
+		<mx:FormItem label="Password:" >
+			<mx:TextInput id="password" displayAsPassword="true">
+			</mx:TextInput>
+		</mx:FormItem>
+		<mx:FormItem>
+			<mx:Button id="submitBtn" label="Submit" click="submitBtn_clickHandler(event)">
+			</mx:Button>
+		</mx:FormItem>
+	</mx:Form>
+</mx:Panel>

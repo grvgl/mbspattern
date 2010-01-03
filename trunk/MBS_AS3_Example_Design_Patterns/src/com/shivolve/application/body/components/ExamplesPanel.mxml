@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!---
+<p>
+ExamplesPanel lists the desgin patterns. Every button launches the Design Pattern example. Currenly, only some of the examples are ready. 
+</p>
+<p>
+Feel free to participate adding to the project to make it a good starting point to learn design patters as well as the technology.
+</p>
+-->
+<mx:VBox xmlns:mx="http://www.adobe.com/2006/mxml"
+		 >
+	<mx:Script>
+		<![CDATA[
+			import mx.controls.Alert;
+			import flash.events.MouseEvent;
+			
+			public static const PATTERN_CLICKED:String = MouseEvent.CLICK;
+		]]>
+	</mx:Script>
+	<mx:HBox toolTip="Behavioral Patterns" backgroundColor="0xeeeeff" paddingBottom="2" backgroundAlpha=".1">
+		<mx:Label id="mind" text="Mind:" toolTip="Behavioral Patterns"/>
+		<mx:VBox>
+			<mx:HBox>
+				<mx:Button id="chainofresponsibilityBtn" label="Chain of Responsibility" toolTip="Chain of Responsibility Example"/>
+				<mx:Button id="commandBtn" label="Command" toolTip="Command Example" color="red" />
+				<mx:Button id="interpreterBtn" label="Interpreter" toolTip="Interpreter Example"/>
+				<mx:Button id="iteratorBtn" label="Iterator" toolTip="Iterator Example"/>
+				<mx:Button id="mediatorBtn" label="Mediator" toolTip="Mediator Example"/>
+				<mx:Button id="mementoBtn" label="Memento" toolTip="Memento Example" color="red" />
+				<mx:Button id="observerExample" label="Observer" toolTip="Observer Example"/>
+			</mx:HBox>
+			<mx:HBox>
+				<mx:Button id="stateBtn" label="State" toolTip="State Example"/>
+				<mx:Button id="strategyExample" label="Strategy" toolTip="Strategy Example"/>
+				<mx:Button id="templatemethodExample" label="Template Method" toolTip="Template Method Example"/>
+				<mx:Button id="visitorExample" label="Visitor" toolTip="Visitor Example"/>
+			</mx:HBox>
+		</mx:VBox>
+	</mx:HBox>
+	<mx:HBox toolTip="Structural Patterns">
+		<mx:Label id="body" text="Body:"/>
+		<mx:HBox horizontalAlign="left">
+			<mx:Button id="adapterExample" label="Adapter" toolTip="adapter Example"/>
+			<mx:Button id="bridgeExample" label="Bridge" toolTip="Bridge Example"/>
+			<mx:Button id="compositeExample" label="Composite" toolTip="Composite Example"/>
+			<mx:Button id="decoratorExample" label="Decorator" toolTip="Decorator Example"/>
+			<mx:Button id="facadeExample" label="Facade" toolTip="Facade Example"/>
+			<mx:Button id="flyweightExample" label="Flyweight" toolTip="Flyweight Example"/>
+			<mx:Button id="proxyExample" label="Proxy" toolTip="Proxy Example"/>
+		</mx:HBox>
+	</mx:HBox>
+	<mx:HBox horizontalAlign="left" toolTip="Creational Patters">
+		<mx:Label id="soul" text="Soul:"/>
+		<mx:HBox>
+			<mx:Button id="abstractfactoryExample" label="Abstract Factory" toolTip="Abstract Factory Example"/>
+			<mx:Button id="builderExample" label="Builder" toolTip="Builder Example"/>
+			<mx:Button id="factoryExample" label="Factory" toolTip="Factory Example"/>
+			<mx:Button id="prototypeExample" label="Prototype" toolTip="Prototype Example"/>
+			<mx:Button id="singletonExample" label="Singleton" toolTip="Singleton Example"/>
+		</mx:HBox>
+	</mx:HBox>
+	<mx:HBox horizontalAlign="left">
+		<mx:Label id="miscellaneous" text="Miscellaneous:"/>
+		<mx:HBox>
+			<!--
+				<mx:Button id="applicationBtn" label="Application" toolTip="Application Example"/>
+				<mx:Button id="mbsExample" label="MBS" toolTip="MBS Example"/>
+				<mx:Button id="mvcExample" label="MVC" toolTip="MVC Example"/>
+			-->
+			<mx:Button id="flexPHPLoginExample" label="MVC Flex PHP Login" toolTip="MVC Flex PHP Login" color="red" />
+		</mx:HBox>
+	</mx:HBox>
+</mx:VBox>
