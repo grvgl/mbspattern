@@ -9,7 +9,7 @@
 		
 		public function LoginHTTPService() 
 		{
-			//this.url = "http://localhost/MBS/MBS_AS3_Example_Design_Patterns/bin-debug/mvcflexphploginexample/login.php";
+			//this.url = "http://localhost/MBS/MBS_AS3_Example_Design_Patterns/bin/mvcflexphploginexample/login.php";
 			this.url = "mvcflexphploginexample/login.php";
 			this.method = "POST";
 			this.resultFormat = "text";
