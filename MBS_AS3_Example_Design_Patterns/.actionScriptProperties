@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<actionScriptProperties mainApplicationPath="Main.mxml" projectUUID="3c0edb6a-f9b3-493d-ab35-24ee531be849" version="6">
-  <compiler additionalCompilerArguments="-locale en_US" autoRSLOrdering="true" copyDependentFiles="true" generateAccessible="false" htmlExpressInstall="true" htmlGenerate="true" htmlHistoryManagement="true" htmlPlayerVersionCheck="true" includeNetmonSwc="false" outputFolderPath="bin-debug" rootURL="http://localhost/MBS/MBS_AS3_Example_Design_Patterns/bin-debug" sourceFolderPath="src" strict="true" targetPlayerVersion="0.0.0" useApolloConfig="false" useDebugRSLSwfs="true" verifyDigests="true" warn="true">
+<actionScriptProperties mainApplicationPath="Main.mxml" projectUUID="6b7eb40a-89df-4c23-a4ed-7ac53cfd40e8" version="6">
+  <compiler additionalCompilerArguments="-locale en_US" autoRSLOrdering="true" copyDependentFiles="true" generateAccessible="false" htmlExpressInstall="true" htmlGenerate="true" htmlHistoryManagement="true" htmlPlayerVersionCheck="true" includeNetmonSwc="false" outputFolderPath="bin" rootURL="http://localhost/MBS/MBS_AS3_Example_Design_Patterns/bin" sourceFolderPath="src" strict="true" targetPlayerVersion="0.0.0" useApolloConfig="false" useDebugRSLSwfs="true" verifyDigests="true" warn="true">
     <compilerSourcePath>
       <compilerSourcePathEntry kind="1" linkType="1" path="${DOCUMENTS}/MBS/MBS_AS3/src"/>
     </compilerSourcePath>
@@ -16,6 +16,7 @@
   </compiler>
   <applications>
     <application path="Main.mxml"/>
+    <application path="MBS_AS3_Example_Design_Patterns.mxml"/>
   </applications>
   <modules/>
   <buildCSSFiles/>
