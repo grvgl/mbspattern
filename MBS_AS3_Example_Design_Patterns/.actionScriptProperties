@@ -16,7 +16,6 @@
   </compiler>
   <applications>
     <application path="Main.mxml"/>
-    <application path="MBS_AS3_Example_Design_Patterns.mxml"/>
   </applications>
   <modules/>
   <buildCSSFiles/>
