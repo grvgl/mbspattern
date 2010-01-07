@@ -2,15 +2,15 @@
 {
 	/**
 	 * 
-	 * <p>MBS Pattern is an intuitive way to look at design patterns. 
+	 * <p>MBSPattern is a framework that provides an intuitive way to use design patterns.
 	 * 	<ul><li>
-			MBS Pattern is a collection of design patterns with their generic definitions. 
+			MBSPattern is a collection of design patterns with their generic definitions. 
 		</li><li>
-			MBS Pattern uses pattern-based naming conventions. It provides a consistent terminology to develop across the technologies.
+			MBSPattern uses pattern-based naming conventions. It provides a consistent terminology to develop across the technologies.
 		</li><li>
 			It provides a cosistent way to harness the inherent capabilities of the languages. 
 		</li><li>
-			At the application level, MBS Pattern corresponds to the popular MVC implementation with an approach to match with MBS naming conventions of the Mind, Body, Soul triad (Soul -> Mind -> Body => Source -> Connection -> Result). 
+			At the application level, MBSPattern corresponds to the popular MVC implementation with an approach to match with MBS naming conventions of the Mind, Body, Soul triad (Soul -> Mind -> Body => Source -> Connection -> Result). 
 		</li></ul>
 
 		MBS broadly categorizes design patterns into three types.
@@ -25,7 +25,7 @@
 	 * <p>MBS categories the design patterns into three parts. There is also a fourth part that puts mind, body and soul into action. Name of the package is <code>action</code>.</p>
 	 * 
 	 * 
-	 * <b>MBS Pattern code resides in <code>com.shivolve.mbs</code> package</b>. Core design patterns exist in three packages <code>mind</code>, <code>body</code> and <code>soul</code>. There is a fourth <code>action</code> package to utilize the in-built features of the language. 
+	 * <b>MBSPattern code resides in <code>com.shivolve.mbs</code> package</b>. Core design patterns exist in three packages <code>mind</code>, <code>body</code> and <code>soul</code>. There is a fourth <code>action</code> package to utilize the in-built features of the language. 
 <ul>
 <li><code>com.shivolve.mbs.as3.mind</code> contains behavioral patterns. Use these patterns to think and guide behaviour.</li>
 <li><code>com.shivolve.mbs.as3.body</code> contains structural patterns. Use these patterns to make thigns with form and structure.</li>
@@ -157,7 +157,7 @@
 	 * 
 	 * <p>Object oriented programming models the real world. MBS programming uses mind, body, soul concepts to model the real world.</p>
 
-<p>MBS Pattern, at the core, is a collection of design patterns categorized as mind, body or soul. This is an attempt to feel at home by using Mind, Body, Soul perspective. Mind, Body and Soul form the universal triad. This being so evolutionary does not force to live to constraints to new definitions every time.</p>
+<p>MBSPattern, at the core, is a collection of design patterns categorized as mind, body or soul. This is an attempt to feel at home by using Mind, Body, Soul perspective. Mind, Body and Soul form the universal triad. This being so evolutionary does not force to live to constraints to new definitions every time.</p>
 <ul>
 <li>
 Thinking of Control, View, Model as Mind, Body and Soul feels great.
