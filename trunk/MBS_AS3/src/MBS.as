@@ -3,14 +3,13 @@
 	/**
 	 * 
 	 * <p>MBSPattern is a framework that provides an intuitive way to use design patterns.
-	 * 	<ul><li>
+	 * 	<ul><li>At the application level, MBS is an MVC implementation with an approach to match with MBS naming conventions of the Mind, Body, Soul triad (Soul -> Mind -> Body => Source -> Connection -> Result). 
+	    </li><li>
 			MBSPattern is a collection of design patterns with their generic definitions. 
 		</li><li>
 			MBSPattern uses pattern-based naming conventions. It provides a consistent terminology to develop across the technologies.
 		</li><li>
 			It provides a cosistent way to harness the inherent capabilities of the languages. 
-		</li><li>
-			At the application level, MBSPattern corresponds to the popular MVC implementation with an approach to match with MBS naming conventions of the Mind, Body, Soul triad (Soul -> Mind -> Body => Source -> Connection -> Result). 
 		</li></ul>
 
 		MBS broadly categorizes design patterns into three types.
