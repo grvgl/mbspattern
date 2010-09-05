@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Window xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		  xmlns:s="library://ns.adobe.com/flex/spark" 
+		  xmlns:mx="library://ns.adobe.com/flex/mx" 
+		  xmlns:ns="library://ns.adobe.com/flex/halo"
+		  creationComplete="init()"
+		  transparent="true"  
+		  resizable="true"
+		  status="This is status bar."
+		  >
+	<fx:Script>
+		<![CDATA[
+			
+			private function init():void
+			{
+				stage.displayState = StageDisplayState.FULL_SCREEN_INTERACTIVE;
+				this.htmlContainer.reload();
+			}
+			
+			private function loadURL(url:String):void
+			{
+				navigateToURL(new URLRequest(url), "_blank");
+			}
+			
+		]]>
+	</fx:Script>
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<ns:VBox width="100%" height="100%">
+		<ns:HBox>
+			<s:TitleBar title="hello">
+				
+			</s:TitleBar>
+			<ns:HBox width="100%" height="30">
+				<s:TLFTextInput id="tiUrl" width="100%" height="30"
+								fontSize="15"
+								text="http://www.google.com/"
+								editable="true">
+				</s:TLFTextInput>
+				<s:Button id = "min" label = "_" height="30" width = "30" cornerRadius="15"/>
+				<s:Button id = "max" label = "+" height="30" width = "30" cornerRadius="15"/>
+				<s:Button id = "xx" label = "X" height="30" width = "30" cornerRadius="15"/>
+				
+			</ns:HBox>
+		</ns:HBox>
+		<ns:HBox width="100%" height="100%">
+			<ns:HTML id="htmlContainer"
+					 location="{tiUrl.text}"
+					 width="100%"
+					 height="{this.height - 60}"
+					 >
+			</ns:HTML>
+		</ns:HBox>
+		
+		
+	</ns:VBox>
+</s:Window>
