@@ -1,0 +1,71 @@
+﻿.myTextInput
+{
+   borderStyle: none;
+   borderColor: #505050;
+   backgroundAlpha: 0;
+   backgroundColor: #ffffff;
+   color: #5C5C5C;
+   themeColor: #FFFFFF;
+}
+
+Button 
+{
+   cornerRadius: 0;
+   borderColor: #000000;
+   themeColor: #333333;
+}
+
+Alert
+{
+	backgroundColor: #000000;
+	borderColor: #000000;
+	backgroundAlpha: 0.9;
+	borderAlpha: 0.9;
+	color: #FFFFFF;
+}
+
+ToolTip
+{
+   backgroundColor: #333333;
+   color: #cccccc;
+}
+
+DataGrid
+{
+   backgroundAlpha: 1;
+   backgroundColor: #666666;
+   alternatingItemColors: #666666, #333333;
+   headerColors: #000000, #000000;
+   horizontalGridLines: true;
+   horizontalGridLineColor: #000000;
+   verticalGridLines: false;
+   verticalGridLineColor: #cccccc;
+   rollOverColor: #ffffff;
+   textRollOverColor: #000000;
+   borderColor: #000000;
+   selectionColor: #ffffff;
+   color: #ffffff;
+   headerStyleName: "mydataGridHeaderStyle";
+}
+
+.mydataGridHeaderStyle 
+{
+   color: #ffffff;
+   fontWeight: normal;
+   fontStyle: italic;
+   textDecoration: none;
+   letterSpacing: 1;
+}
+
+VScrollBar
+{
+   cornerRadius: 0;
+   highlightAlphas: 0.46, 0.27;
+   fillAlphas: 1, 1, 1, 1;
+   fillColors: #666666, #333333, #cccccc, #999999;
+   trackColors: #666666, #333333;
+   themeColor: #000000;
+   borderColor: #000000;
+   iconColor: #111111;
+   thumbOffset: 1;
+}

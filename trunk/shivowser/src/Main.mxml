@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:WindowedApplication xmlns:fx="http://ns.adobe.com/mxml/2009" 
+					   xmlns:s="library://ns.adobe.com/flex/spark" 
+					   xmlns:mx="library://ns.adobe.com/flex/mx"
+					   xmlns:body = "com.shivolve.application.body.components.*"
+					   creationComplete="init(event)"
+					   pageTitle="Shivowser - The Shortcut Browser"
+					   showStatusBar="false" 
+					   width="100%" height="100%"
+					   >
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+		<fx:Script>
+			
+			<![CDATA[
+				import com.shivolve.application.mind.StartupCommand;
+				import com.shivolve.application.mindbodysoul.ApplicationMind;
+				import com.shivolve.application.mindbodysoul.ApplicationSoul;
+				import com.shivolve.application.mindbodysoul.WindowedApplicationBody;
+				import com.shivolve.mbs.as3.action.interfaces.body.IMBSBody;
+				import com.shivolve.mbs.as3.action.interfaces.mind.IMBSMind;
+				import com.shivolve.mbs.as3.action.interfaces.soul.IMBSSoul;
+				import com.shivolve.mbs.as3.action.mind.observer.MBSNotification;
+				import com.shivolve.mbs.as3.mind.observer.Notification;
+				
+				import mx.controls.Alert;
+				import mx.core.Application;
+				import mx.events.FlexEvent;
+				
+				import spark.components.Application;
+			
+			/**
+			* Steps to the MVC implementation:
+			* 1. Initialize the Model (Soul).
+			* 2. Pass a reference of Soul to the Mind. 
+			* 3. Pass the reference of Mind and Soul to Body.
+			* 
+			* Philosophy: 
+			* Steps to implement the MVC implementation of MBS:
+			* 1. In the beginning there was only Soul.
+			* 2. Mind was born when Soul started expanding. 
+			* 3. Body was formed by Mind with inspiration from Soul. 
+			*/
+			private var soul:IMBSSoul;
+			private var mind:IMBSMind;
+			private var body:IMBSBody;
+			private var STARTUP:String = "Startup";
+			[Bindable]
+			private var stageHeight:Number = 0;
+				
+			private function init(event:FlexEvent):void
+			{
+				//this.stage.displayState = StageDisplayState.FULL_SCREEN_INTERACTIVE;
+				//this.sHeight = this.stage.stageHeight;
+				
+				trace("Main#init():event=", event);
+				this.soul = new ApplicationSoul();
+				this.mind = new ApplicationMind(this.soul);
+				this.body = new WindowedApplicationBody(this.soul, this.mind, WindowedApplication(this));
+				trace("Main#init():this.getBody()="+this.getBody());
+				var startupNotification:MBSNotification = new MBSNotification(STARTUP, this, "");
+				this.mind.addCommand(startupNotification.getName(), StartupCommand);
+				this.body.notifyObservers(startupNotification);
+				this.mind.executeCommand(startupNotification);
+				//
+				nativeWindow.stage.displayState = flash.display.StageDisplayState.FULL_SCREEN_INTERACTIVE;
+				//Alert.show(String(this.height));
+				stageHeight = this.height;
+			}
+			
+			public function getBody():IMBSBody
+			{
+				return this.body;
+			}
+			]]>
+		</fx:Script>
+		<body:SButtonBar id="sButtonBar" y="{stageHeight - 30}"/>
+			
+		<!--mx:VDividedBox id="examplesDividedBox" >
+			
+			<body:ExamplesPanel id="examplesPanel_1" width="750" height="350" backgroundColor="#cceeFF" paddingLeft="5" paddingTop="5">
+			</body:ExamplesPanel>
+			<body:ExamplesPanel id="examplesPanel_2" width="750" height="350" backgroundColor="#ffeecc" paddingLeft="5" paddingTop="5">
+			</body:ExamplesPanel>
+		</mx:VDividedBox-->
+		
+</s:WindowedApplication>
