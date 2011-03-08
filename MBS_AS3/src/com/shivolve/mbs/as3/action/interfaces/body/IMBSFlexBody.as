@@ -5,7 +5,7 @@ package com.shivolve.mbs.as3.action.interfaces.body
 	import flash.display.IBitmapDrawable;
 	import com.shivolve.mbs.as3.interfaces.body.IBody;
 	
-	public interface IMBSBody extends IBody
+	public interface IMBSFlexBody extends IBody, IFlexDisplayObject
 	{
 		
 	}
