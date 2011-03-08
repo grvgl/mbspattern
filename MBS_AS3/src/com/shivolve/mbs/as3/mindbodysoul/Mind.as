@@ -12,7 +12,7 @@
 	import com.shivolve.mbs.as3.interfaces.soul.ISoul;
 	import com.shivolve.mbs.as3.mind.observer.Notification;
 	import com.shivolve.mbs.as3.mind.observer.Notifier;
-	import mx.controls.Alert;
+	//import mx.controls.Alert;
 	
 	
 	public class Mind implements IMind
