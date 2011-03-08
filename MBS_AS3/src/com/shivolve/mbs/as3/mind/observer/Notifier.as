@@ -1,7 +1,7 @@
-package com.shivolve.mbs.as3.mind.observer
+﻿package com.shivolve.mbs.as3.mind.observer
 {
 	import com.shivolve.mbs.as3.interfaces.mind.*;
-	import mx.controls.Alert;
+	//import mx.controls.Alert;
 	
 	public class Notifier implements INotifier
 	{
@@ -10,7 +10,7 @@ package com.shivolve.mbs.as3.mind.observer
 		
 		public function notify(notification:Notification):void
 		{
-			Alert.show("Notifier - notifying observer...");
+			//Alert.show("Notifier - notifying observer...");
 			notification.getBody().notifyObservers(notification);
 		}
 		
