@@ -31,7 +31,7 @@ Feel free to participate adding to the project to make it a good starting point 
 			</mx:HBox>
 			<mx:HBox>
 				<mx:Button id="stateBtn" label="State" toolTip="State Example"/>
-				<mx:Button id="strategyExample" label="Strategy" toolTip="Strategy Example"/>
+				<mx:Button id="strategyExample" label="Strategy" toolTip="Strategy Example" color="red" />
 				<mx:Button id="templatemethodExample" label="Template Method" toolTip="Template Method Example"/>
 				<mx:Button id="visitorExample" label="Visitor" toolTip="Visitor Example"/>
 			</mx:HBox>
