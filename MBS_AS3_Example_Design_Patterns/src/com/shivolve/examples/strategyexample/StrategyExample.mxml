@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Group xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		 xmlns:s="library://ns.adobe.com/flex/spark" 
+		 xmlns:mx="library://ns.adobe.com/flex/mx" width="400" height="300">
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<fx:Script>
+		<![CDATA[
+			import com.shivolve.examples.strategyexample.contexts.*;
+			import com.shivolve.examples.strategyexample.strategies.*;
+			import com.shivolve.mbs.as3.mind.strategy.Context;
+			[Bindable]
+			public var textData:String="This Label displays plain text.";
+			
+			private var context1:Context;
+			private var context2:Context;
+			private var context3:Context;
+			private function displayText(e:MouseEvent):void 
+			{
+				switch(e.target.name)
+				{
+					case "contextOneButton":
+						context1 = new ContextOne();
+						textData = context1.doProcess();
+						break;
+					case "contextTwoButton" :
+						context2 = new ContextTwo();
+						textData = context2.doProcess();
+						break;
+					case "contextThreeButton" :
+						context3 = new ContextThree();
+						textData = context3.doProcess();
+						break;
+				}
+			}         
+		]]>
+	</fx:Script>
+	<mx:Panel title="ViewStack Container" layout="vertical" color="0xffffff" borderAlpha="0.15" height="240" width="500"
+			  paddingTop="10" paddingRight="10" paddingBottom="10" paddingLeft="10" horizontalAlign="center">
+		
+		<mx:HBox borderStyle="solid" width="100%" color="0x323232" horizontalAlign="center"
+				 paddingTop="5" paddingLeft="5" paddingRight="5" paddingBottom="5">
+			
+			<mx:Button id="contextOneButton" label="Context One" click="displayText(event)"/>
+			<mx:Button id="contextTwoButton" label="Context Two" click="displayText(event)"/>
+			<mx:Button id="contextThreeButton" label="Context Three" click="displayText(event)"/>
+		</mx:HBox>
+		
+		<mx:Panel title="Label Control Example" height="75%" width="75%" 
+				  paddingTop="10" paddingLeft="10" color="0xffffff" borderAlpha="0.15">
+			
+			<mx:Label id="simpleLabel" text="{textData}" color="0x000000"/>
+			
+		</mx:Panel>
+		
+	</mx:Panel>
+</s:Group>
