@@ -7,6 +7,7 @@ package com.shivolve.application.body
 	import com.shivolve.mbs.as3.interfaces.mind.INotification;
 	import com.shivolve.mbs.as3.mind.mediator.Mediator;
 	import com.shivolve.examples.mementoexample.MementoExample;
+	import com.shivolve.examples.strategyexample.StrategyExample;
 	import com.shivolve.examples.mvcflexphploginexample.MBSAS3ExampleFlexPHPLogin;
 	import mx.containers.Canvas;
 	import mx.core.UIComponent;
@@ -45,6 +46,12 @@ package com.shivolve.application.body
 					var uiComponent:UIComponent = new UIComponent();
 					exampleCanvas.addChild(uiComponent);
 					uiComponent.addChild(mementoExample);	
+					break;
+				case "strategyExample":
+					var strategyExample:StrategyExample = new StrategyExample();
+					//var uiComponent:UIComponent = new UIComponent();
+					exampleCanvas.addChild(strategyExample);
+					//uiComponent.addChild(strategyExample);	
 					break;
 				case "applicationBtn":
 					var stopWatch:ApplicationExample = new ApplicationExample();
