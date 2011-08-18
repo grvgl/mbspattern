@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml"
-	xmlns:view="com.shivolve.examples.mvcflexphploginexample.view.*"
-	creationComplete="onInit(event)"
-	>
-	<mx:Script>
+<mx:Canvas 	xmlns:fx="http://ns.adobe.com/mxml/2009" 
+			xmlns:s="library://ns.adobe.com/flex/spark" 
+			xmlns:mx="library://ns.adobe.com/flex/mx"
+			xmlns:view="com.shivolve.examples.mvcflexphploginexample.view.*"
+			creationComplete="onInit(event)"
+			>
+	<fx:Script>
 		<![CDATA[
-			import com.shivolve.examples.mvcflexphploginexample.model.LoginModel;
-			import com.shivolve.examples.mvcflexphploginexample.control.LoginControl;
 			import com.shivolve.examples.mvcflexphploginexample.control.LoginCommand;
+			import com.shivolve.examples.mvcflexphploginexample.control.LoginControl;
+			import com.shivolve.examples.mvcflexphploginexample.model.LoginModel;
 			import com.shivolve.examples.mvcflexphploginexample.model.states.LoginState;
 			
 			import mx.core.Container;
@@ -21,18 +23,20 @@
 			
 			private function getView(stateName:String):Container
 			{
+				
 				var viewState:Container;
+				
 				switch (stateName)
 				{
 					case LoginState.LOGIN_STATE:
-						viewState = loginPanel;
+						viewState = loginPanel as Container;
 						break;
 					case LoginState.LOGGED_IN_STATE:
-						viewState = loggedInPanel;
+						viewState = loggedInPanel as Container;
 						loggedInPanel.title = "Welcome! " + this.loginPanel.username.text;
 						break;
 					case LoginState.LOGGED_OUT_STATE:
-						viewState = loggedOutPanel;
+						viewState = loggedOutPanel as Container;
 						break;
 				}
 				return viewState;
@@ -46,13 +50,20 @@
 			}
 
 		]]>
-	</mx:Script>
+	</fx:Script>
 	<mx:ViewStack id="loginViewStack"
 				  selectedChild = "{getView(this.loginModel.state)}"
 				  width="350" height="200"
 				  >
-		<view:LoginPanel id="loginPanel"/>
-		<view:LoggedInPanel id="loggedInPanel"/>
-		<view:LoggedOutPanel id="loggedOutPanel"/>
+		
+		<s:NavigatorContent>
+			<view:LoginPanel id="loginPanel"/>
+		</s:NavigatorContent>
+		<s:NavigatorContent>
+			<view:LoggedInPanel id="loggedInPanel"/>
+		</s:NavigatorContent>
+		<s:NavigatorContent>
+			<view:LoggedOutPanel id="loggedOutPanel"/>
+		</s:NavigatorContent>
 	</mx:ViewStack>	
 </mx:Canvas>
