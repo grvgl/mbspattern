@@ -5,7 +5,7 @@
 <s:Group xmlns:fx="http://ns.adobe.com/mxml/2009" 
 		 xmlns:s="library://ns.adobe.com/flex/spark" 
 		 xmlns:mx="library://ns.adobe.com/flex/halo"
-		 creationComplete="group1_creationCompleteHandler(event)"
+		 creationComplete="group1_creationCompleteHandler(event)" xmlns:mx1="library://ns.adobe.com/flex/mx"
 		 >
 	<fx:Declarations>
 		<!-- Place non-visual elements (e.g., services, value objects) here -->
@@ -46,10 +46,10 @@
 
 		]]>
 	</fx:Script>
-	<mx:Text x="0" y="50" width="700" htmlText="{currentExample + ' example has not yet been developed. You are welcome to contribute!'}" selectable="false">
-	</mx:Text>
-	<mx:Text x="0" y="100" width="700" selectable="false">
-		<mx:htmlText >
+	<mx1:Text x="0" y="50" width="700" text="{currentExample + ' example has not yet been developed. You are welcome to contribute!'}" selectable="false">
+	</mx1:Text>
+	<mx1:Text x="0" y="100" width="700" selectable="false">
+		<mx1:htmlText>
 			<![CDATA[<a href="http://code.google.com/p/mbspattern/" target="_blank"><font color="#1122EE">MBS Pattern</font></a> (Mind, Body, Soul) is a collection of basic definitions of design patterns. These are generic enough to use for specific requirements.
 			
 You can checkout the SVN code here - <a href="http://mbspattern.googlecode.com/svn/trunk/" target="_blank"><font color="#1122EE">http://mbspattern.googlecode.com/svn/trunk/</font></a>.
@@ -58,6 +58,6 @@ You can join or start a new discussion here - <a href="http://groups.google.com/
 
 We could have any number of examples so feel free to add anything you would like.
 			]]>
-		</mx:htmlText>
-	</mx:Text>
+		</mx1:htmlText>
+	</mx1:Text>
 </s:Group>

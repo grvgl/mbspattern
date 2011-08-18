@@ -2,10 +2,13 @@
 <!---
 	LoginPanel presents the login screen to the user.
 -->
-<mx:Panel xmlns:mx="http://www.adobe.com/2006/mxml"
-		 title="Login as username=demo, password=demo">
-
-	<mx:Script>
+<s:Panel xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		 xmlns:s="library://ns.adobe.com/flex/spark" 
+		 xmlns:mx="library://ns.adobe.com/flex/halo"
+		 title="Login as username=demo, password=demo"
+		 >
+	
+	<fx:Script>
 		<![CDATA[
 			import com.shivolve.mbs.as3.action.mind.observer.MBSNotifier;
 			import com.shivolve.examples.mvcflexphploginexample.control.*;
@@ -32,20 +35,20 @@
 			}
 
 		]]>
-	</mx:Script>
+	</fx:Script>
 
-	<mx:Form>
-		<mx:FormItem label="Username:">
-			<mx:TextInput id="username">
-			</mx:TextInput>
-		</mx:FormItem>
-		<mx:FormItem label="Password:" >
-			<mx:TextInput id="password" displayAsPassword="true">
-			</mx:TextInput>
-		</mx:FormItem>
-		<mx:FormItem>
-			<mx:Button id="submitBtn" label="Submit" click="submitBtn_clickHandler(event)">
-			</mx:Button>
-		</mx:FormItem>
-	</mx:Form>
-</mx:Panel>
+	<s:Form>
+		<s:FormItem label="Username:">
+			<s:TextInput id="username">
+			</s:TextInput>
+		</s:FormItem>
+		<s:FormItem label="Password:" >
+			<s:TextInput id="password" displayAsPassword="true">
+			</s:TextInput>
+		</s:FormItem>
+		<s:FormItem>
+			<s:Button id="submitBtn" label="Submit" click="submitBtn_clickHandler(event)">
+			</s:Button>
+		</s:FormItem>
+	</s:Form>
+</s:Panel>

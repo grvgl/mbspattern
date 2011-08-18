@@ -68,7 +68,7 @@
 		<body:ExamplesPanel id="examplesPanel"  width="750" height="150" backgroundColor="#ffffcc" paddingLeft="5" paddingTop="5">
 		</body:ExamplesPanel>
 
-		<mx:Canvas id="exampleCanvas" width="750" height="350" backgroundColor="#cceeFF" paddingLeft="5" paddingTop="5">
+		<mx:Canvas id="exampleCanvas" width="750" height="350" backgroundColor="#cceeFF">
 		</mx:Canvas>
 		
 	</mx:VDividedBox>
