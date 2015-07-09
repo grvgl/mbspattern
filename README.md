@@ -1,5 +1,5 @@
 # mbspattern
-Automatically exported from code.google.com/p/mbspattern
+Automatically exported from https://code.google.com/p/mbspattern/
 
 MBSPattern is a framework that provides an intuitive way to use design patterns.
 
